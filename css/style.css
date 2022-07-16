@@ -407,6 +407,47 @@ body::after {
   min-height: 475px;
 }
 
+@-webkit-keyframes anim {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  to {
+    opacity: 1;
+  }
+}
+
+[data-animation-image] {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+[data-animation-image]._watcher-view {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes show {
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes show {
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .header {
   background-color: #fff;
 }
@@ -1049,6 +1090,10 @@ body::after {
   background: url("../img/location.svg") 0 0 no-repeat;
 }
 
+.contacts__link_address:hover {
+  text-decoration: underline;
+}
+
 .contacts__link_phone {
   background: url("../img/telephone.svg") 0 0 no-repeat;
 }
@@ -1200,6 +1245,39 @@ body::after {
 @media (min-width: 61.99875em) {
   .title {
     max-width: 133px;
+  }
+
+  [data-animation] {
+    opacity: 0;
+  }
+
+  [data-animation]:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+
+  [data-animation]:nth-child(2) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+
+  [data-animation]:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+
+  [data-animation]:nth-child(4) {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+
+  [data-animation]._watcher-view {
+    -webkit-animation-name: anim;
+            animation-name: anim;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 
   .content-private__text {
@@ -1510,6 +1588,14 @@ body::after {
   }
 
   .footer__link:hover {
+    text-decoration: underline;
+  }
+
+  .contacts__link_phone:hover {
+    text-decoration: underline;
+  }
+
+  .contacts__link_mail:hover {
     text-decoration: underline;
   }
 
