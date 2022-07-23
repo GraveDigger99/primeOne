@@ -530,22 +530,9 @@ body::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@supports ((-moz-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem )) or (column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem ))) {
-  .lang__list {
-    -webkit-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem );
-       -moz-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem );
-            column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem );
-  }
-}
-
-@supports not ((-moz-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem )) or (column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem ))) {
-  .lang__list {
-    -webkit-column-gap: calc(0.9375rem + 0 * (100vw - 20rem) / 36.875);
-       -moz-column-gap: calc(0.9375rem + 0 * (100vw - 20rem) / 36.875);
-            column-gap: calc(0.9375rem + 0 * (100vw - 20rem) / 36.875);
-  }
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
 }
 
 .lang__link {
@@ -855,18 +842,7 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@supports (row-gap: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
-  .item-product__content {
-    row-gap: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem );
-  }
-}
-
-@supports not (row-gap: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
-  .item-product__content {
-    row-gap: calc(1.25rem + 0 * (100vw - 20rem) / 36.875);
-  }
+  row-gap: 20px;
 }
 
 .item-product__text {
@@ -1243,10 +1219,6 @@ body::after {
 }
 
 @media (min-width: 61.99875em) {
-  .title {
-    max-width: 133px;
-  }
-
   [data-animation] {
     opacity: 0;
   }
@@ -1399,6 +1371,7 @@ body::after {
     top: -100%;
     position: fixed;
     width: 100%;
+    height: 150px;
     background-color: #fff;
     left: 0;
     -webkit-transition: top 0.3s ease 0s;
@@ -1406,18 +1379,6 @@ body::after {
     transition: top 0.3s ease 0s;
     z-index: 20;
   }
-
-@supports (height: clamp( 9.375rem , 9.375rem  +  0vw , 9.375rem )) {
-    .menu__body::before {
-      height: clamp( 9.375rem , 9.375rem  +  0vw , 9.375rem );
-    }
-}
-
-@supports not (height: clamp( 9.375rem , 9.375rem  +  0vw , 9.375rem )) {
-    .menu__body::before {
-      height: calc(9.375rem + 0 * (100vw - 20rem) / 36.875);
-    }
-}
 
   .menu-open .menu__body {
     left: 0;
