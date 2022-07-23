@@ -448,6 +448,10 @@ body::after {
   }
 }
 
+.item-product__title {
+  max-width: 121px;
+}
+
 .header {
   background-color: #fff;
 }
